@@ -1,0 +1,132 @@
+/* Estilos genéricos */
+body {
+    background-color: #C58BC2;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.20rem
+}
+
+/* Estilos de la cabecera */
+.cabecera {
+    height: 4rem;
+    margin: -8px;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #780373;
+    margin-bottom: 0px;
+
+}
+
+.cabecera > .logo {
+    margin-left: 10px;
+    width: 20%;
+}
+
+.cabecera > .enlaces {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cabecera > .enlaces > .enlace {
+    border: 2px;
+    border-color: white;
+}
+
+
+.cabecera > .enlaces > .enlace a {
+    text-decoration: none;
+    color: white;
+}
+
+.cabecera > .contacto {
+    margin-right: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cabecera > .contacto a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.20rem;
+}
+/* Estilos de los atajos */
+.atajos {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.atajos a {
+    text-decoration: none;
+    color: black;
+    padding: 6px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+
+}
+.atajos a:hover {
+    border: 3px solid #780373;
+    border-radius: 5px;
+}
+
+/* Estilos del contenido */
+.contenido {
+    display: flex;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #F6E7F5;
+    box-shadow: 1px 0px 41px -5px rgba(0,0,0,0.63);
+}
+
+.contenido > .preguntas-respuestas {
+    width: 90%;
+    margin-top: 30px;
+}
+.contenido > .preguntas-respuestas > .pregunta a {
+    text-decoration: none;
+    color: black;
+}
+.contenido > .preguntas-respuestas > .respuesta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+}
+.contenido > .preguntas-respuestas > .respuesta p {
+    margin-bottom: 5px;
+}
+.contenido > .preguntas-respuestas > .respuesta pre {
+    margin-left: -15%;
+    font-size: 0.9rem;
+}
+
+.contenido > .preguntas-respuestas > .respuesta img {
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
+#f_str_1 {
+    height: 40%;
+}
+#f_str_2 {
+    height: 20%;
+}
+#f_str_3 {
+    width: 40%;
+}
+#f_str_4 {
+    width: 40%;
+}
+#c_1 {
+    width: 40%;
+}
+#c_2 {
+    width: 60%;
+}
+
+/* Estilos de pie de página */
