@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkpoint 7</title>
+
+    <link rel="stylesheet" href="Diseño/diseño_general.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cabecera">
+                <div class="logo">
+            <img src="Imagenes/Logo.png" alt="logo">
+        </div>
+        <div class="enlaces">
+            <div class="enlace">
+                <a href="mi_web.html" target="_blank">Página principal</a>
+            </div>
+            <div class="enlace">
+                <a href="pagina_check_7.html">Checkpoint 7</a>
+            </div>
+        </div>
+        <div class="contacto">
+            <a href="contacto.html" target="_blank">Contacto</a>
+        </div>
+    </div>
+    <a name="menu"></a>
+    <div class="atajos">
+        <a href="#java">Javascript</a>
+        <a href="#datos">Tipos de datos</a>
+        <a href="#cadenas">Funciones de cadenas</a>
+        <a href="#condicionales">Condicionales</a>
+        <a href="#ternarios">Ternarios</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#this">Clave "this"</a>
+    </div>
+    <div class="contenido">
+        <div class="preguntas-respuestas">
+            <div class="pregunta">
+                <a name="java"></a>
+                <a href="#menu"><h4>¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?</h4></a>
+            </div>
+            <div class="respuesta">
+                <p>
+                    La característica más importante de JacaScript (JS), la cual la diferencia de cualquier otro lenguaje de programación, es el hecho de que es el único lenguaje que los navegadores web son capaces de interpretar sin la necesidad de un intermediario. El resto de lenguajes deben estar en un servidor que realice el proceso para convertirlos en interpretables, pero Javasript puede utilizarse directamente en la web. Por esta razón, podemos utilizar JS directamente en nuestro navegador por medio de las herramientas para desarrolladores. Este acceso nos permite además poder utilizar JS para automatizar procesos como, por ejemplo, clicar una gran cantidad de botones sin tener que hacerlo manualmente.
+                </p>
+
+                <p>
+                    Es importante saber que la mayoría de aplicaciones y páginas web están escritas en parte o completamente en Javascript, por lo que queda claro que es un lenguaje muy importante dentro del mundo de la programación y el desarrollo web; tanto para la creación de aplicaciones para ordenador como para los diseñados para teléfonos inteligentes o "smartphones".   
+                </p>
+            </div>
+            <hr/>
+             <div class="pregunta">
+                <a name="datos"></a>
+                <a href="#menu"><h4>¿Cuáles son algunos tipos de datos JS?</h4></a>
+            </div>
+            <div class="respuesta">
+                <p>
+                    En JavaScript, como en otros muchos lenguajes de programación, tenemos varios tipos de datos y voy a presentar aquí los más básicos:
+                </p>
+                <ul>
+                    <li>Cadenas: son cadenas de caracteres alfanuméricos, ya sean palabras, frases, etc.; y su característica principal es que se escribe su contenido entre comillas simples o dobles (', ").</li>
+                    <li>Números: como su nombre indica, son números y se escriben sin añadir ningún carácter especial; JS entiende que al ver un número sin ningún otro elemento es un número.</li>
+                    <li>Arrey: es lo que en lenguajes como Python se llamaría lista. Se escribe su contenido entre corchetes y se separa cada elemento con una coma. Estos arreys pueden contener cualquier tipo de dato, incluidos los arreys y cada elemento deberá seguir su sintaxis, por ejemplo, si incluimos una cadena como elemento del arrey esta irá entre comillas, etc.</li>
+                    <li>Objetos: son colecciones de pares de datos (clave-valor) que podrían compararse con los diccionarios de Python. Se escriben entre llaves, la clave y el valor se separan por medio de los dos puntos y cada par se separa con una coma del resto de pares.</li>
+                    <li>Booleanos: este tipo de dato solo contiene dos formas, true y false, y estas se escriben sin comillas.</li>
+                </ul>
+                <p>
+                    Voy a presentar a continuación estos tipos de datos vistos y la manera de seleccionar datos concretos dentro de arreys y objetos:
+                </p>
+                <div style="text-align: center;">
+                <img src="Imagenes/datos.png" alt="tipos de datos" id="dato">
+                </div>
+                <p>
+                    Hay que tener en cuenta que cada tipo de dato cuenta con funciones específicas que nos permiten tratarlos de distinta manera, aunque hay funciones que pueden aplicarse a todos ellos.
+                </p>
+                <p>
+                    Como ejemplo de funciones que pueden utilizarse con distintos tipos de datos, tenemos la pseudo función length, esta nos da la longitud del elemento que le proporcionamos. Lo que quiero que se entienda con este ejemplo es cómo puede una misma función devolver distintos tipos de respuesta. Si utilizamos length con una cadena, nos devuelve la cantidad de caracteres, pero si la utilizamos con un arrey, nos devuelve la cantidad de elementos dentro de la lista que están separadas por una coma.
+                </p>
+                <div style="text-align: center;">
+                <img src="Imagenes/length.png" alt="función length" id="len">
+                </div>
+                <p>
+                    Recursos:
+                </p>
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Data_structures">Data Structures</a>
+            </div>
+            <hr/>
+             <div class="pregunta">
+                <a name="cadenas"></a>
+                <a href="#menu"><h4>¿Cuáles son las funciones de String en JS?</h4></a>
+            </div>
+            <div class="respuesta">
+                <p>
+                    Hay muchas funciones que se pueden utilizar con el tipo de datos string o cadena; a continuación presentaré algunas de las más importantes:
+                </p>
+                <ul>
+                    <li>.length - técnicamente no es una función, por lo que no lleva el paréntesis; nos devuelve la cantidad de caracteres que contiene una cadena.</li>
+                    <li>.charAt() - permite buscar un carácter específico dentro de una cadena por medio del número de índice; introducimos el número como argumento y nos devuelve el carácter que se encuentra en esa posición. Solo se puede utilizar un carácter por vez.</li>
+                    <li>.concat() - nos permite añadir contenido a una cadena; para ello, escribimos como argumento el elemento que queremos añadir al final de nuestra cadena.</li>
+                    <li>.includes() - nos permite comprobar si un elemento está o no en la cadena; nos devolverá true si encuentra el elemento y false si no lo encuentra.</li>
+                    <li>.startsWith() - parecido a la función anterior, pero esta busca el elemento y devuelve true si encuentra el elemento en primera posición de la cadena.</li>
+                    <li>.endsWith() - este realiza la misma función que la anterior, pero devuelve true si encuentra el elemento en la posición final.</li>
+                    <li>.match() - nos permite buscar un elemento en una cadena; si hay varios elementos que coinciden con la búsqueda, nos devuelve cada uno de ellos en forma de arrey.</li>
+                    <li>.repeat() - nos permite multiplicar el contenido de una cadena de forma concatenada. Para ello, debemos introducir el número de veces que queremos que se repita la cadena.</li>
+                    <li>.replace() - esta función nos permite cambiar un elemento de una cadena por otro; por ejemplo, podemos cambiar una palabra por otra; para ello, introduciremos como argumento la palabra que queremos eliminar y la palabra que queremos introducir, ambas separadas por una coma y sin olvidar las comillas que identifican una cadena.</li>
+                    <li>.search() - introducimos el elemento que queremos buscar en la cadena y nos devuelve el índice en el que comienza. Permite realizar las búsquedas con expresiones regulares; esto significa que podemos buscar patrones que no son explícitamente el valor. Un ejemplo de esto es un número de teléfono, en vez de buscar un número de teléfono en particular, podemos introducir una expresión regular que nos da el patrón de un número de teléfono, de este modo, si encuentra este tipo de patrón, nos dará su índice. En resumidas cuentas, las expresiones regulares son un conjunto de símbolos, números, etc. que se interpretan de manera específica. Si no encuentra el elemento, devuelve -1.</li>
+                    <li>.indexOf() - introducimos el elemento que queremos buscar en la cadena y nos devuelve el índice en el que comienza. Podemos introducir un segundo argumento indicando el número de índice a partir del cual queremos que empiece a realizar la búsqueda. Si no encuentra el elemento devuelve -1.</li>
+                    <li>.lastIndexOf() - si tenemos varios elementos iguales dentro de la cadena, por ejemplo, dos palabras iguales, la función anterior nos da el índice de la primera que encuentra; si queremos la última, esta es la función que utilizaremos. Si no encuentra el elemento, devuelve -1.</li>
+                    <li>.slice() - recorta una parte de la cadena, para ello podemos pasar uno o dos argumentos. Si introducimos un solo número de índice, se devolverá el valor de la cadena a partir de ese índice. Si introducimos dos números de índice, se devolverá el valor de la cadena que se encuentre entre esos dos índices. Si introducimos números negativos, el índice se contará desde el final de la cadena, pero el comportamiento será el mismo, es decir, -8 nos devolverá el valor de la cadena desde ese índice hasta el final.</li>
+                    <li>.toUpperCase() - convierte toda la cadena en mayúscula.</li>
+                    <li>.toLowerCase() - convierte toda la cadena en minúscula.</li>
+                    <li>.trim() - elimina el excedente de espacios al principio y al final de una cadena.</li>
+                </ul>
+                <p>
+                    A continuación voy a compartir ejemplos de lo que ocurre al utilizar cada una de las funciones anteriores:
+                </p>
+                <div style="text-align: center;">
+                    <img src="Imagenes/funciones_str_1.png" alt="funciones de cadenas" id="f_str_1">
+                </div>
+                <div style="text-align: center;">
+                    <img src="Imagenes/funciones_str_2.png" alt="funciones de cadenas" id="f_str_2">
+                </div>
+                <div style="text-align: center;">
+                    <img src="Imagenes/funciones_str_3.png" alt="funciones de cadenas" id="f_str_3">
+                    <img src="Imagenes/funciones_str_4.png" alt="funciones de cadenas" id="f_str_4">
+                </div>
+                <p>
+                    Recursos:
+                </p>
+                <a href="https://stackoverflow.com/questions/354110/what-is-the-difference-between-indexof-and-search">indexOf y search</a>
+                <a href="https://stackoverflow.com/questions/18687530/using-match-and-the-difference-between-search">match y search</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+                
+            </div>
+            <hr/>
+            <div class="pregunta">
+                <a name="condicionales"></a>
+                <a href="#menu"><h4>¿Qué es un condicional?</h4></a>
+            </div>
+            <div class="respuesta">
+                <p>
+                    Una condicional, como su nombre indica, se utiliza para generar una condición que controle el flujo de nuestro programa. Esto es, podemos decir: quiero que ocurra esto cuando se cumpla esta condición y esto otro cuando no se cumpla la condición. La sintaxis básica de las condicionales es la siguiente:
+                </p>
+                <pre><p>
+                    if (condición) {
+                        acciones que queremos que ocurran si se cumple la condición
+                    } else {
+                        acciones que queremos que ocurran si no se cumple la condición
+                    }
+                </p></pre>
+                <p>
+                    Además de esta sintaxis básica, tenemos otra clave que nos permite concatenar distintas condiciones:
+                </p>
+                    <pre><code>    
+                    if (condición) {
+                        acciones que queremos que ocurran si se cumple esta condición
+                    } else if (condición) {
+                        acciones que queremos que ocurran si se cumple esta condición
+                    }
+                    else {
+                        acciones que queremos que ocurran si no se cumplen las condiciones anteriores
+                    }
+                </code></pre>
+                <p>
+                    Puede que en  algunos casos no sea necesario añadir el último "else" porque se han cubierto todas las condiciones posibles, pero es bueno añadirlo para evitar problemas que no hayamos tenido en cuenta. En el caso anterior solo he añadido una condición "else if", pero podría añadir todas las que quisiese.
+                </p>
+                <p>
+                    A continuación propongo un ejemplo de uso de las condicionales:
+                </p>
+                <div style="text-align: center;">
+                    <img src="Imagenes/condicional_1.png" alt="condicionales" id="c_1">
+                </div>
+                <p>
+                    En el primer ejemplo, podemos ver una condición que devuelve un mensaje cuando la edad es igual a 22 y otro cuando no lo es. Podemos ver, también, la diferencia de uso del signo = doble y triple. En los ejemplos podemos ver que el número de la variable es igual al de la condición en todos los casos, pero vemos que no todas las veces obtenemos el mismo resultado. La diferencia está en que el doble símbolo acepta dos tipos de datos que contienen el mismo número, es decir, lee 22 (número) y "22" (cadena) del mismo modo y considera válidas a ambas. Por el contrario, el triple símbolo busca que, además de ser el mismo número, sea el mismo tipo de dato, por lo que considera que "22" y 22 son diferentes. Es importante conocer esta diferencia para saber cuál versión necesitamos en nuestros programas.
+                </p>
+                <div style="text-align: center;">
+                    <img src="Imagenes/condicional_2.png" alt="condicionales" id="c_2">
+                </div>
+                <p>
+                    En el segundo ejemplo vemos el uso de else if para añadir condiciones y el uso de mayor que (>), mayor o igual (>=), menor que (<), menor o igual (<=). Además, vemos el doble símbolo && que significa "y", es decir, ambas condiciones a la derecha e izquierda de este símbolo deben cumplirse para que las acciones dentro de ese bloque se lleven a cabo. Hemos visto los comparadores == y === para comprobar si dos elementos son iguales o idénticos, pero podemos utilizar también sus contrapartes != (son diferentes en valor) y !== (son diferentes tanto en valor como en tipo de dato).
+                </p>
+                <p>
+                    Hemos mencionado que && indica que ambas condiciones se deben cumplir, pero tenemos otros símbolos que nos permiten que se lleve a cabo la acción si se cumple una de las dos condiciones, esto es la doble barra ||. En este caso, si se cumple la condición a su izquierda, pero no la de su derecha, se considera que la condición se cumple; y lo mismo ocurre si se cumple la de su derecha, pero no la de su izquierda.
+                </p>
+                <p>
+                    Recursos:
+                </p>
+                <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/Conditionals">Condicionales</a>
+            </div>
+            <hr/>
+            <div class="pregunta">
+                <a name="ternarios"></a>
+                <a href="#menu"><h4>¿Qué es un operador ternario?</h4></a>
+            </div>
+            <div class="respuesta">
+              <p>
+                Los operadores ternarios nos brindan una forma de crear condiciones en una sola línea de código. Este tipo de condicional reducido nos permite crear condicionales en lugares donde solo podemos escribir código en una sola línea, como puede ser el caso de incorporar un script JS dentro de un elemento de otro lenguaje de programación. De momento, lo importante es entender cómo funciona su sintaxis para cuando te encuentres en una situación en la que no te queda más remedio que crear tu condicional en una sola línea.
+              </p>
+              <p>
+                La sintaxis básica de un operador ternario es la siguiente:
+              </p>
+              <pre>
+                <code>
+                    condición ? acción que se debe llevar a cabo si la condición se cumple :
+                    acción que se debe llevar a cabo si la condición no se cumple
+                </code>
+              </pre>
+              <p>
+                Además, podemos crear varias condiciones dentro del operador ternario:
+              </p>
+              <pre>
+                <code>
+                    condición ?  acción que se debe llevar a cabo si la condición se cumple :
+                    otra condición ?  acción que se debe llevar a cabo si esta otra condición se cumple :
+                    acción que se debe llevar a cabo si la condición no se cumple
+                </code>
+              </pre>
+              <p>
+                Esta última opción se entiende mejor si colocamos unos paréntesis:
+              </p>
+              <pre>
+                <code>
+                    condición ?  acción que se debe llevar a cabo si la condición se cumple :
+                    (otra condición ?  acción que se debe llevar a cabo si esta otra condición se cumple :
+                    acción a llevar a cabo si la condición no se cumple)
+                </code>
+              </pre>
+              <p>
+                En este ejemplo primero se vería si la primera condición se cumple; si esta no se cumple, se revisaría si la segunda condición se cumple, si no se cumple se llevaría a cabo la última acción. A continuación mostraré cómo redactaríamos las condicionales que hemos creado en el anterior apartado en este formato:
+              </p>
+              <div style="text-align: center;">
+                <img src="Imagenes/ternario_1.png" alt="ternarios" id="t_1">
+                <img src="Imagenes/ternario_2.png" alt="ternarios" id="t_2">  
+              </div>
+              <p>
+                Como se puede apreciar, este formato es un poco más complicado de leer y se puede complicar más al ir añadiendo más condiciones. Para ayudar con la lectura de ternarios, podemos dividirlos en distintas líneas, aunque todas ellas seguirían considerando una sola línea.
+              </p>
+              <p>
+                Recursos:
+              </p>
+              <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator">Ternarios</a>
+            </div>
+            <hr/>
+            <div class="pregunta">
+                <a name="funciones"></a>
+                <a href="#menu"><h4>¿Cuál es la diferencia entre una declaración de función y una expresión de función?</h4></a>
+            </div>
+            <div class="respuesta">
+                <p>
+                    Las funciones son bloques de código que utilizamos para llevar a cabo una acción. Hay funciones ya creadas dentro del lenguaje Javascript que podemos utilizar sin tener que crear nuestras propias funciones, pero para acciones más concretas, podemos crear nuestras propias funciones. Para crear estas funciones tenemos varias formas de redacción que voy a exponer a continuación.
+                </p>
+                <p>
+                    Por un lado, tenemos las declaraciones de función; estas serían la forma más convencional de crear una función y la forma más clara en cuanto a su lectura. Este tipo de funciones se utiliza principalmente en el alcance global; este alcance global se refiere al programa general que no está dentro de ningún otro bloque de código y, por consiguiente, está accesible para todo el programa. La sintaxis de las declaraciones de función es la siguiente:
+                </p>
+                <pre>
+                    <code>
+                        function nombre(parámetros) {
+	                        acción de la función
+                        } 
+                    </code>
+                </pre>
+                <p>
+                    Como vemos, tenemos la palabra clave "function" seguida del nombre que le queramos dar a la función y los paréntesis en los que podemos incluir o no parámetros; estos parámetros no son obligatorios y son lo que en lenguajes como Pyhon se llaman argumentos. Después, abrimos corchetes y redactamos entre ellos la acción que queremos que la función lleve a cabo. Cuando queramos llamar la función, deberemos escribir el nombre de la función y pasar los parámetros en caso de que fuesen necesarios.
+                </p>
+                <pre>
+                    <code>
+                        nombre(parámetros);
+                    </code>
+                </pre>
+                <p>
+                    Este sería un ejemplo del uso de una declaración de función:
+                </p>
+                <div style="text-align: center;">
+                <img src="Imagenes/declaracion.png" alt="declaración de función" id="dec">
+                </div>
+                <p>
+                    Como vemos en este ejemplo, el nombre de la función es suma y los parámetros son numUno y numDos. Los nombres de los parámetros no son palabras específicas, sino nombres que creemos que describen los valores que necesitas introducir al llamar la función. En este caso, es una suma y los parámetros serán dos números. Después, como queremos que la función realice la suma de los parámetros, hacemos que la función devuelva la suma de los dos parámetros por medio de la palabra clave "return". Para llamar la función hemos escrito el nombre de la función y hemos añadido entre paréntesis los números que queremos sumar.
+                </p>
+                <p>
+                    Ahora vamos a hablar de la expresión de funciones. Esta forma de crear funciones suele utilizarse dentro de bloques de código, como puede ser una variable, un objeto, etc. Esto no significa que no se pueda utilizar cualquier tipo de función donde queramos, sino que seguir estas pautas se considera buenas prácticas y facilita que cualquier programador entienda nuestro código y pueda trabajar con él de forma más sencilla. Estas funciones nos permiten crean funciones anónimas, ya que pueden funcionar sin darles un nombre (aunque sí pueden tener nombre). La sintaxis de las expresiones de función es la siguiente:
+                </p>
+                <pre>
+                    <code>
+                        var nombre = function () {
+                            acción a llevar a cabo por la función
+                        }
+                    </code>
+                </pre>
+                <p>
+                    En este caso hemos creado la función dentro de una variable, aunque no es la única opción. La mayor diferencia con la declaración de función sería al llamar la función, ya que, en este caso, utilizaremos el nombre de la variable:
+                </p>
+                <pre>
+                    <code>
+                        nombre();
+                    </code>
+                </pre>
+                <p>
+                    Si seguimos con el ejemplo anterior, nuestra función se podría ver así:
+                </p>
+                <div style="text-align: center;">
+                <img src="Imagenes/expresion.png" alt="expresión de función" id="exp">
+                </div>
+                <p>
+                    Vemos que el resultado es el mismo y la sintaxis, muy parecida. Otra diferencia de las expresiones de función respecto a la declaración de función es que las primeras se pueden llamar antes de crear la función.
+                </p>
+                <p>
+                    Por último, me gustaría hablar de las funciones flecha. Estas son expresiones de función que se pueden redactar de forma más acotada. El ámbito de uso es parecido al de las expresiones de función, pero más limitado. Se pueden redactar dentro de una variable de la siguiente manera:
+                </p>
+                <pre>
+                    <code>
+                        var nombre = parámetro => acción
+                    </code>
+                </pre>
+                <p>
+                    Si hay más de un parámetro, estos se escriben entre paréntesis y separadas por comas. Se llaman igual que las expresiones de función. El ejemplo de la suma que hemos visto con el resto de tipos de función se vería de la siguiente manera:
+                </p>
+                <div style="text-align: center;">
+                <img src="Imagenes/flecha.png" alt="funciones flecha" id="flecha">
+                </div>
+                <p>
+                    Respecto a todas las formas de funciones que hemos visto, cabe recalcar que estas son las formas más básicas de utilizarlos, pero existen formas más complejas en combinación de otros elementos.
+                </p>
+                <p>
+                    Recursos:
+                </p>
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Funciones flecha</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Declaración de función</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function">Expresión de función</a>
+                <a href="https://www.w3schools.com/js/js_functions.asp">Funciones</a>
+            </div>
+            <hr/>
+            <div class="pregunta">
+                <a name="this"></a>
+                <a href="#menu"><h4>¿Qué es la palabra clave "this" en JS?</h4></a>
+            </div>
+            <div class="respuesta">
+                <p>
+                    La palabra clave "this" se utiliza para hacer referencia a un elemento concreto ubicado dentro de una función, por ejemplo. Al crear un programa podemos utilizar el mismo nombre para más de una variable y esto puede generar errores, por ello, cuando estamos trabajando con una variable dentro de una clase, una función, etc. podemos utilizar "this" para hacer referencia al nombre concreto ubicado dentro de la clase o función en la que estamos.
+                </p>
+                <p>
+                    La clave this puede hacer referencia a diferentes objetos dependiendo del lugar del que se le llame.
+                </p>
+                <ul>
+                    <li>En el contexto global (alcance global), que es aquel que no se encuentra dentro de ningún bloque de código, this hace referencia al objeto global, al programa en sí.</li>
+                    <li>Del mismo modo, en una función, this hará referencia al objeto global.</li>
+                    <li>Si la función que contiene this la utilizamos como método de un objeto, this hará referencia al objeto al que hemos asignado la función. Cuando anidamos funciones que contienen this, este hace referencia al objeto más inmediato; es decir, si llamamos una función desde dentro de una función anidada, el objeto al que pertenece la función anidada es el que se referenciará con this.</li>
+                </ul>
+                <p>
+                    Un posible ámbito de uso de la palabra clave "this" es en una función constructora. Si lo comparamos con el lenguaje Python, this equivaldría a self en las funciones constructoras de una clase de Python. Esta función se vería de la siguiente manera:
+                </p>
+                <pre>
+                    <code>
+                        function nombre (parámetro) {
+                            this.parámetro = parámetro
+                        }
+                    </code>
+                </pre>
+                <p>
+                    Y crearíamos un objeto de este modo:
+                </p>
+                <pre>
+                    <code>
+                        variable = new nombre(parámetro)
+                    </code>
+                </pre>
+                <p>
+                    Vamos a ver un ejemplo para que quede más claro:
+                </p>
+                <div style="text-align: center;">
+                    <img src="Imagenes/this.png" alt="ejemplo this" id="th">
+                </div>
+                <p>
+                    Referencias:
+                </p>
+                <a href="https://www.esquinadelcodigo.com/this-en-javascript">this en JS</a>
+            </div>
+        </div>
+    </div>
+    <div class="pie">
+        
+    </div>
+</body>
+</html>
